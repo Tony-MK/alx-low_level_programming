@@ -1,10 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-char *a = " and is 0\n";
-char *b = " and is greater than 5\n";
-char *c = " and is less than 6 and not zero\n";
-char *s = "Last digit of ";
 /**
  *  * main - Prints out last digit
  *   * Return: 0 Always (sucess)
@@ -12,6 +8,10 @@ char *s = "Last digit of ";
 int main(void)
 {
 	int n;
+	char *a = " and is 0\n";
+	char *b = " and is greater than 5\n";
+	char *c = " and is less than 6 and not 0\n";
+	char *s = "Last digit of ";
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
