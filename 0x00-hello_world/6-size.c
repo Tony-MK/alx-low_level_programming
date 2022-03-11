@@ -6,7 +6,7 @@
 int main(void)
 {
 
-	char *template = "Size of a %s: %d bytes(s)\n";
+	char *template = "Size of a %s: %d byte(s)\n";
 
 	printf(template, "char", sizeof(char));
 	printf("Size of an int: %lu bytes(s)\n", sizeof(int));
