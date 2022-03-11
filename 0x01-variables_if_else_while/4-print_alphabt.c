@@ -5,21 +5,16 @@
  */
 int main(void)
 {
-	char c = 97;
+	char c = 96;
 
-	while (c < 101)
+	while (c < 122)
 	{
-		putchar(c);
 		c++;
-	}
-	c++;
-	while (c < 123)
-	{
-		if (c != 113)
+		if (c != 101 && c != 113)
 		{
 			putchar(c);
 		}
-		c++;
+
 	}
 	putchar('\n');
 	return (0);

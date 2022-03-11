@@ -13,7 +13,7 @@ int main(void)
 		c++;
 	}
 	c = 97;
-	while (c < 104)
+	while (c < 105)
 	{
 		putchar(c);
 		c++;

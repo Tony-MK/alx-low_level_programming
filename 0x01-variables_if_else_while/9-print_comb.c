@@ -5,13 +5,14 @@
  */
 int main(void)
 {
-	char c = 47;
+	short int n = 47;
 
-	while (c < 57)
+	while (n < 57)
 	{
-		c++;
-		putchar(c);
-		if (c != 57){
+		n++;
+		putchar(n);
+		if (n != 57)
+		{
 			putchar(',');
 			putchar(' ');
 		}

@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *  * main - Prints lower cae alphabet
+ *  * main - Prints single digits characters
  *  *  * Return: 0 Always (sucess)
  */
 int main(void)
