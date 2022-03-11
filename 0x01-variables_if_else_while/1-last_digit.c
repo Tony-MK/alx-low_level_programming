@@ -14,7 +14,7 @@ int main(void)
 	int n;
 
 	srand(time(0));
-	n = rand() - RAND_MAX;
+	n = rand() - RAND_MAX / 2;
 	printf("%s%d is %d%s", s, n, n % 10, n % 10 == 0 ? a : (n % 10 > 5 ? b : c));
 	return (0);
 }
