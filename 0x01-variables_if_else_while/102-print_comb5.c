@@ -16,10 +16,9 @@ int main(void)
 			k = i;
 			while (k < 58)
 			{
-				m = 48;
-				while (m < 57)
+				m = j;
+				while (m < 58)
 				{
-					m++;
 					putchar(i);
 					putchar(j);
 					putchar(' ');
@@ -30,6 +29,7 @@ int main(void)
 					{
 						putchar(',');
 						putchar(' ');
+						m++;
 					}
 					else
 					{
