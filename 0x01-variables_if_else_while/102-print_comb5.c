@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  *  * main - Prints all possible double digits integers combinations pairs
- *  *  * Return: 0 Always (sucess)
+ *  *  * Return: 0 Always (sucess), otherwise failed
  */
 int main(void)
 {
@@ -31,17 +31,18 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 					}
+					else
+					{
+						putchar('\n');
+						return (0);
+					}
 
 				}
-
 				k++;
 			}
-
 			j++;
 		}
-
 		i++;
 	}
-	putchar('\n');
 	return (0);
 }
