@@ -5,44 +5,28 @@
  */
 int main(void)
 {
-	short int j, k, m;
-	short int i = 48;
+	short int j;
+	short int i = 0;
 
-	while (i < 58)
+	while (i < 100)
 	{
-		j = 48;
-		while (j < 58)
+		j = 1 + i;
+		while (j < 100)
 		{
-			k = i;
-			while (k < 58)
-			{
-				m = j + 1;
-				while (m < 58)
-				{
-					putchar(i);
-					putchar(j);
-					putchar(' ');
-					putchar(k);
-					putchar(m);
-
-					if (i != 57 || j != 56 || k != 57 || m != 57)
-					{
-						putchar(',');
-						putchar(' ');
-						m++;
-					}
-					else
-					{
-						putchar('\n');
-						return (0);
-					}
-
-				}
-				k++;
-			}
+			putchar(i / 10 + '0');
+			putchar(i % 10 + '0');
+			putchar(' ');
+			putchar(j / 10 + '0');
+			putchar(j % 10 + '0');
 			j++;
+			if (i != 98 || j == 99)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 		i++;
 	}
+	putchar('\n');
 	return (0);
 }
