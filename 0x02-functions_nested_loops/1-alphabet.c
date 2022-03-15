@@ -1,10 +1,15 @@
-#include "main.h"
+int _putchar(char c);
 /**
- * * main - check the code
- *  *  * Return: Always 0.
+ * * print_alphabet - Prints the alphabet in lower case 
 */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	char c = 97;
+
+	while (c < 123)
+	{
+		_putchar(c);
+		c++;
+	};
+	_putchar('\n');
 }
