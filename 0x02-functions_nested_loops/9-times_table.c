@@ -7,13 +7,15 @@ void times_table(void)
 	int r = 0;
 	int c = 0;
 	int n = 0;
-	while(r < 10)
+
+	while (r < 10)
 	{
-		while(c < 10)
+		while (c < 10)
 		{
 			n = r * c;
 			if (n < 10)
 			{
+				_putchar(' ');
 				_putchar(n + '0');
 			}
 			else
@@ -22,7 +24,8 @@ void times_table(void)
 				_putchar(n % 10 + '0');
 			}
 			c++;
-			if (c < 10){
+			if (c < 10)
+			{
 				_putchar(',');
 				_putchar(' ');
 			}
