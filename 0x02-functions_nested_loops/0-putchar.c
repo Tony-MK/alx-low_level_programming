@@ -1,4 +1,4 @@
-#include "_putchar.c"
+int _putchar(char c);
 /**
  * * main - Prints "_putchar"
  *  *  * Return: Always 0 (success)
