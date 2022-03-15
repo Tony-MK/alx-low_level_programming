@@ -1,0 +1,22 @@
+#include <stdio.h>
+int _islower(int c)
+/**
+ * * main - Calls _islower function
+ *  *  * Return: Always 0 (success)
+*/
+int main(void)
+{
+	char *s = "_putchar\n";
+	int i = 0;
+
+	
+	{
+		putchar(*(s + i));
+		i++;
+	}
+	return (0);
+}
+
+/**
+ * * main - Checks is if character is lower
+ *  * * 
