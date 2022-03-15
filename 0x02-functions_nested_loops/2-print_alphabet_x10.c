@@ -7,8 +7,9 @@ void print_alphabet_x10(void)
 {
 	unsigned short int n = 0x0;
 
-	while (n < 0x0a){
+	while (n < 0x0a)
+	{
 		n++;
 		print_alphabet();
 	};
-}
+};
