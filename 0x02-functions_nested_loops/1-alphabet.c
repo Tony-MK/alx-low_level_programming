@@ -1,6 +1,6 @@
-int _putchar(char c);
+#include "main.h"
 /**
- * * print_alphabet - Prints the alphabet in lower case 
+ * * print_alphabet - Prints the alphabet in lower case
 */
 void print_alphabet(void)
 {
