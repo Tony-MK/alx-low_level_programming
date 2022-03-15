@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * * abs - Performs absoulte operation
+ * * _abs - Performs absoulte operation
  * * * @n: The int to perform operation
  * * * * Return: The absoulte int
 */
