@@ -4,34 +4,40 @@
 */
 void times_table(void)
 {
-	int r = 0;
-	int c = 0;
-	int n = 0;
+	unsigned short int c, n;
+	unsigned short int r = 0x0;
 
 	while (r < 10)
 	{
+		c = 0x00;
 		while (c < 10)
 		{
-			n = r * c;
-			if (n < 10)
+			if (c == 0)
 			{
-				_putchar(' ');
-				_putchar(n + '0');
+				_putchar('0');
 			}
 			else
 			{
-				_putchar(n / 10 + '0');
-				_putchar(n % 10 + '0');
+				n = r * c;
+				if (n < 10)
+				{
+					_putchar(' ');
+					_putchar(n + '0');
+				}
+				else
+				{
+					_putchar(n / 10 + '0');
+					_putchar(n % 10 + '0');
+				}
 			}
-			c++;
-			if (c < 10)
+			if (c < 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
+			c++;
 		}
 		_putchar('\n');
 		r++;
-		c = 0;
 	}
 }
