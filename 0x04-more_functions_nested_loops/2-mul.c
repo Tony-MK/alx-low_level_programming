@@ -1,6 +1,6 @@
 /**
-* * _isdigit - Checks if ASCII character is a digit
-* * * @c: First int to multiply
+* * mul - Multipies two numbers together
+* * * @a: First int to multiply
 * * * * @b: Second int to multiply
 * * * * * Return: Operation result
 */
