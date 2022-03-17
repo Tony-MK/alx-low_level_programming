@@ -18,7 +18,7 @@ void print_triangle(int size)
 			while (spaces > 0)
 			{
 				_putchar(0x20);
-				spaces --;
+				spaces--;
 			}
 			while (hashtags--)
 				_putchar(0x23);
