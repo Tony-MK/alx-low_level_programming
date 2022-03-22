@@ -1,18 +1,18 @@
 #include "main.h"
-#include "2-strlen.c"
+#include <stdio.h>
 /**
-* * puts_half - Prints second half of characters in a string
-* * * @str: The starting character pointer of a string
+* * print_array - Prints array of int
+* * * @a: The starting int in the array
+* * * * @n: The lenght of the array
 */
-void puts_half(char *str)
+void print_array(int *a, int n)
 {
-	register unsigned int length = (unsigned int)  _strlen(str);
-	register unsigned int index = length % 2 == 0 ? length / 2 : (length - 1) / 2;
+	register int i = 0;
 
-	while (index < length)
+	while (i < n)
 	{
-		_putchar(*(str + index));
-		index++;
-	}
-	_putchar(0x0A);
+		printf("%d", *(a + i));
+		i++;
+		printf("%s", (i < n) ? ", " : "\n");
+	};
 }
