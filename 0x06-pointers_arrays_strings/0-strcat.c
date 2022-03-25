@@ -9,14 +9,14 @@ char *_strcat(char *dest, char *src)
 	register int s = 0;
 	register int d = 0;
 
-	while (*(dest + d) != 0)
+	while (*(dest + d))
 		d++;
-	d++;
-	while (*(src + s) != 0)
+	while (*(src + s))
 	{
-		*(dest + (d + s)) = *(src + s);
+		*(dest + d) = *(src + s);
 		s++;
+		d++;
 	}
-	*(dest + (d + s)) = 0;
+
 	return (dest);
 }
