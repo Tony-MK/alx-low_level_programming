@@ -5,6 +5,23 @@
 */
 char *leet(char *s)
 {
-	register char chars[] = {'a'}
-	register int i = 0;
+	char uc[5] = {'A', 'E', 'O', 'T', 'L'};
+	char lc[5] = {'a', 'e', 'o', 't', 'l'};
+	int num[5] = {4, 3, 0, 7, 1};
+	int n, i = 0;
+
+	while (*(s + i) != 0)
+	{
+		n = 0;
+		while (n < 6)
+		{
+			if (*(s + i) == uc[n] || *(s + i) == lc[n])
+			{
+				*(s + i) = '0' + num[n];
+			}
+			n++;
+		}
+		i++;
+	}
+	return (s);
 }
