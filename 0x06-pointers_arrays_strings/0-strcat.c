@@ -2,15 +2,21 @@
 * * strcat - Concatenates two strings
 * * * @dest: First string
 * * * * @src: Other string
+* * * * * Return: Char pointer to concatenated string
 */
-char *_strcat(char *dest, int *src)
+char *_strcat(char *dest, char *src)
 {
-	register int i = 0;
-	register int l = 0;
+	register int s = 0;
+	register int d = 0;
 
-	while (*(dest + l) != 0)
-		l++;
-	while (*(src + i++) != 0)
-		*(dest + (len + i)) = *(src + i);
+	while (*(dest + d) != 0)
+		d++;
+	d++;
+	while (*(src + s) != 0)
+	{
+		*(dest + (d + s)) = *(src + s);
+		s++;
+	}
+	*(dest + (d + s)) = 0;
 	return (dest);
 }
