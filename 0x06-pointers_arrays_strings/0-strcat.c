@@ -1,5 +1,5 @@
 /**
-* * strcat - Concatenates two strings
+* * _strcat - Concatenates two strings
 * * * @dest: First string
 * * * * @src: Other string
 * * * * * Return: Char pointer to concatenated string
