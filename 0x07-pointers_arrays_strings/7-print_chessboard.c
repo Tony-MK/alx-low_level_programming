@@ -9,7 +9,7 @@ void print_chessboard(char (*a)[8])
 	int i2 = 0;
 
 print:
-	_putchar(*(*(i1 + a) + i2));
+	_putchar(*(*(a + i1) + i2));
 	if (i1 < 8)
 	{
 		i2 = i2 == 7 ? 0 : i2 + 1;
