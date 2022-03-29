@@ -11,12 +11,16 @@ char *_strpbrk(char *s, char *accept)
 
 check:
 	a = 0;
-	while (*(accept + a++) != 0)
+	while (*(accept + a) != 0)
 	{
 		if (*(s + i) == *(accept + a))
 			return (s + i);
+		a++;
 	}
-	if (*(s + i++) != 0)
+	if (*(s + i) != 0)
+	{
+		i++;
 		goto check;
+	}
 	return (NULL);
 }
