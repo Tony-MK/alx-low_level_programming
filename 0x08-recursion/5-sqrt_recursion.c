@@ -24,5 +24,5 @@ int _sqrt_recursion(int n)
 
 	if (n > 3)
 		return (compute_sqrt(n, 3));
-	return (-1);
+	return (n == 0 || n == 1 ? 1 : -1);
 }
