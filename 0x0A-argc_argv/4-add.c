@@ -15,13 +15,14 @@ root:
 	{
 		argv++;
 		nchar = 0;
-		while (*(*argv + nchar++))
+		while (*(*argv + nchar))
 		{
-			if ((48 > *(*argv + nchar)) || (*(*argv + nchar) >  57))
+			if ((*(*argv + nchar)) < 47 || (*(*argv + nchar) >  57))
 			{
 				printf("Error\n");
 				return (0);
 			}
+			nchar++;
 		}
 		sum += atoi(*argv);
 		goto root;
