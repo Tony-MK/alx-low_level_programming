@@ -1,17 +1,17 @@
-#include "2-strlen.c"
+#include "2-strlen_recursion.c"
 /**
- * * has_product - Compute factorial of an integer
- * * * @n: Integer to check if n is prime number
- * * * * @i: Divider
- * * * * Return: 0 If n has poduct with no reminder. Otherwise 1
+ * * _is_palindrome - Compute factorial of an integer
+ * * * @s: A pointer to the starting char of the string
+ * * * * @l: The index of the last char
+ * * * * Return: 1 If string is a palindrome. Otherwise 0
  */
-int has_product(int n, int i)
+int _is_palindrome(char *s, int l)
 {
-	if (n % i == 0)
-		return (0);
-	else if (n / 2 > i)
-		return (has_product(n, i + 2));
-	return (1);
+	if (l < 1)
+		return (1);
+	else if (*s == *(s + l))
+		return (_is_palindrome(s + 1, l - 2));
+	return (0);
 }
 /**
  * * is_palindrome - Checks if a string is a palindrome
@@ -20,10 +20,9 @@ int has_product(int n, int i)
  */
 int is_palindrome(char *s)
 {
-	if (*s){
-		
-	register int l = strlen(s);
-	if (n > 2 && n % 2 != 0)
-		return (is(n, 3));
-	return (0);
+	int l = _strlen_recursion(s);
+
+	if (l > 1)
+		return (_is_palindrome(s, l - 1));
+	return (l == 0 ? 1 : 0);
 }
