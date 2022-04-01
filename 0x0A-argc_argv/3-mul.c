@@ -1,16 +1,19 @@
-#include "print.c"
+#include <stdlib.h>
+#include <stdio.h>
 /**
  * main - Displays the product of two numbers
  * @argc : Number of agruments
  * @argv : String arguments
  * Return: Always 0
  */
-int main(int argc, char *argv[])
+int main(int argc  __attribute__((unused)), char **argv)
 {
-	if (argc == 0x2)
-		print_int(str_to_int(*argv) * );
-	else
-		print_string("Error");
-	_putchar(0x0A);
+	if (argc != 0)
+		printf("Error\n");
+	else 
+	{
+		argv++;
+		printf("%d\n", atoi(*argv) * atoi(*(argv + 1)));
+	}
 	return (0);
 }
