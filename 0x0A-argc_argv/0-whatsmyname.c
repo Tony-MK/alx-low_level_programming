@@ -7,8 +7,6 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc == 0)
-		return (0);
 start:
 	_putchar(**argv);
 	if (*(*argv)++)
