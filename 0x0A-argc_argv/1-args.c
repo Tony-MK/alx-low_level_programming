@@ -1,4 +1,4 @@
-#include "print.c"
+#include <stdio.h>
 /**
  * main - Prints number of command line arguments
  * @argc : Number of agruments
@@ -7,7 +7,6 @@
  */
 int main(int argc, char **argv __attribute__((unused)))
 {
-	print_int(argc - 1);
-	_putchar(0x0A);
+	printf("%d\n", argc - 1);
 	return (0);
 }
