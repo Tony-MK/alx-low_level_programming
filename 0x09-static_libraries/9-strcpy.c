@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-strlen.c"
 /**
 * * _strcpy - Prints second half of characters in a string
 * * * @dest: The starting character pointer of the destination
