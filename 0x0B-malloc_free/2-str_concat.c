@@ -1,26 +1,45 @@
 #include <stddef.h>
 #include <stdlib.h>
 /**
- * alloc_grid - Initializes an array with a specific char
- * @width: The size of the array
- * @height: Character to initialize with
- * Return: A pionter to a char. Otherwise, NULL
+ * str_length - Comptues length of a string
+ * @str: A pointer to the first char of the string
+ * Return: The length of the string
  */
-int **alloc_grid(int width, int height)
+unsigned long int str_length(char *str)
 {
-	int **array = NULL;
+	register unsigned long int length = 0;
 
-	if (width == 0 || height == 0)
-		return (array);
-	array = malloc(sizeof(int *) * height);
-	if (array == NULL)
-		return (array);
-set:
-	height--;
-	*(array + height) = malloc(sizeof(int) * width);
-	if (*(array + height) == NULL)
-		return (NULL);
-	else if (height == 0)
-		return (array);
-	goto set;
+	while (*(str++))
+		length++;
+	return (length);
+}
+/**
+ * str_concat - Concatenates two strings
+ * @s1: First string
+ * @s2: Second string
+ * Return: A pionter to a char. Otherwise, a NULL pionter
+ */
+char *str_concat(char *s1, char *s2)
+{
+	register unsigned long int l1 = str_length(s1);
+	register unsigned long int l2 = str_length(s2);
+	register unsigned long int i = 0;
+	char *s = malloc(l1 + l2 + 1);
+
+	if (s != NULL)
+	{
+		*(s + (l1 + l2)) = 0x00;
+		while (i < l1)
+		{
+			*(s + i) = *(s1 + i);
+			i++;
+		}
+		i = 0;
+		while (i < l2)
+		{
+			*(s + (l1 + i)) = *(s2 + i);
+			i++;
+		}
+	}
+	return (s);
 }
