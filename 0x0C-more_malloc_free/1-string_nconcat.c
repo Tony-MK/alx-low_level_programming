@@ -3,6 +3,7 @@
  * string_nconcat - Concatenates two strings
  * @s1: String one
  * @s2: String two
+ * @n: Number of bytes to copy from the first bytes of s2
  * Return: Pointer to the concatenated string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -11,10 +12,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	register unsigned int l2 = s2 == NULL ? 1 : sizeof(s2);
 	register unsigned int l = l1 + (l2 > n ? n : l2);
 	char *s;
+
 	n = (l2 > n ? n : l2);
 	if (l == 0)
 		return ("");
-	
+
 	s = malloc(l);
 	if (s == NULL)
 		return (s);
