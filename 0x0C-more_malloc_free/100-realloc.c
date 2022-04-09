@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _calloc - Allocates memory for an array ising malloc
- * @nmemb: Number of member elements
- * @size: The number of bytes an member element requires
+ * _realloc - Allocates memory for an array ising malloc
+ * @old_size: Number of member elements
+ * @new_size: The number of bytes an member element requires
  * Return: Pointer to the array
  */
-void *realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *blocks;
 
@@ -26,6 +26,14 @@ void *realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (NULL)
 	}
+	
+	blocks = malloc(new_size);
+	if (blocks == NULL)
+		return (blocks);
 
-	return (ptr);
+	while (--old_size)
+		*(blocks + old_size) = *(ptr + old_size);
+	
+	free(ptr);
+	return (blocks);
 }
