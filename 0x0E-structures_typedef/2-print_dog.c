@@ -1,16 +1,19 @@
-include <stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 /*
  * print_dog - Prints dog attributes
  * @dog: The dog's memory address
  */
 void print_dog(struct dog *d)
 {
-printf(Name: );
-dog->name == NULL ? printf(niln) : printf(%sn, dog->name);
+	if (d != NULL)
+	{
+		printf("Name: ");
+		(d->name == NULL ? printf("(nil)") : printf("%s", d->name));
 
-printf(Age: );
-dog->age == NULL ? printf(niln) : printf(%dn, dog->age);
+		printf("\nAge: %f", d->age);
 
-printf(Owner: );
-dog->owner == NULL ? printf(niln) : printf(%sn, dog->owner);
+		printf("\nOwner: ");
+		(d->owner == NULL ? printf("(nil)\n") : printf("%s\n", d->owner));
+	}
 }

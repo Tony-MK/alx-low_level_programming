@@ -1,4 +1,4 @@
-#include dog.h
+#include "dog.h"
 /*
  * init_dog - Initializes a dog's attributes
  * @dog: The dog's memory address
@@ -8,7 +8,7 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-dog->age = age;
-dog->name = name;
-dog->owner = owner;
+	d->age = age;
+	d->name = name;
+	d->owner = owner;
 }
