@@ -2,7 +2,7 @@
 #include "dog.h"
 /**
  * free_dog - Releases dog struct from memory
- * @dog: Pointer to dog
+ * @d: Pointer to dog
  */
 void free_dog(dog_t *d)
 {
