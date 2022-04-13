@@ -2,6 +2,23 @@
 #include <stdio.h>
 #include "dog.h"
 /**
+ * string_length - Computes string length
+ * @str: String
+ * Retrun: The length of str as an unsigned long
+ */
+unsigned long string_length(char *str)
+{
+	register unsigned long len = 0;
+
+	while (*str)
+	{
+		len++;
+		str++;
+	}
+	return len;
+}
+
+/**
  * new_dog - Initializes dog struct
  * @name: The name of the dog
  * @age: The dog's age
@@ -10,40 +27,29 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog = malloc(sizeof(dog_t));
-	char *ptr;
+	register unsigned long name_len, owner_len = string_length(owner) + 1;
+	dog_t *dog = malloc(sizeof(struct dog));
 
 	if (dog == NULL)
 		return (NULL);
-	dog->name = malloc(sizeof(*name));
+	name_len = string_length(name) + 1;
+	dog->name = malloc(name_len);
 	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
-	dog->owner = malloc(sizeof(*owner));
+	dog->owner = malloc(owner_len);
 	if (dog->owner == NULL)
 	{
 		free(dog->name);
 		free(dog);
 		return (NULL);
 	}
-	*(dog->name + (sizeof(*name) - 1)) = '\0';
-	*(dog->owner + (sizeof(*owner) - 1)) = '\0';
 	dog->age = age;
-	ptr = dog->name;
-	while (*name != '\0')
-	{
-		*ptr = *name;
-		ptr++;
-		name++;
-	}
-	ptr = dog->owner;
-	while (*owner != '\0')
-	{
-		*ptr = *owner;
-		ptr++;
-		owner++;
-	}
+	while (--name_len)
+		*((*dog).name + name_len) = *(name + name_len);
+	while (--owner_len)
+		*(dog->owner + owner_len) = *(owner + owner_len);
 	return (dog);
 }
