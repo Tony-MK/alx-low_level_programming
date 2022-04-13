@@ -12,6 +12,8 @@ int int_index(int *array, size_t size, int (*cmp)(int))
 
 	if (size < 1)
 		return (-1);
+	else if (!array || !cmp)
+		return (-1);
 
 	index = 0;
 

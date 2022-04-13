@@ -1,25 +1,54 @@
-#include <stddef.h>
 /**
- * int_index - Lookups the index of an element in an array
- * @array: Array of integers
- * @size: Size of the array
- * @cmp: Pointer to a function to validate if element matches
- * Return: Index of the first element which cmp doesn't return 0. Otherwise -1.
+ * op_add - Computes sum of two integers
+ * @a: First integer
+ * @b: Second integer
+ * Return: Sum of intergers a and b
  */
-int int_index(int *array, size_t size, int (*cmp)(int))
+int op_add(int a, int b)
 {
-	register size_t index;
+	return (a + b);
+}
 
-	if (size < 1)
-		return (-1);
+/**
+ * op_add - Subtracts two integers
+ * @a: First integer
+ * @b: Second integer
+ * Return: Difference a and b
+ */
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
 
-	index = 0;
+/**
+ * op_mul- Computes the multiplication of a and b
+ * @a: First integer
+ * @b: Second integer
+ * Return: Product a and b
+ */
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
 
-search:
+/**
+ * op_div - Computes division of two integers
+ * @a: First integer
+ * @b: Second integer
+ * Return: Result of the division of a by b
+ */
+int op_div(int a, int b)
+{
+	return (a / b);
+}
 
-	if (cmp(*(array + index)))
-		return (index);
-	else if (++index >= size)
-		return (-1);
-	goto search;
+/**
+ * op_add - Computes the remainder
+ * @a: Divider
+ * @b: Diviser
+ * Return: The remainder of the division of a by b
+ */
+int op_mod(int a, int b)
+{
+	return (a % b);
 }
