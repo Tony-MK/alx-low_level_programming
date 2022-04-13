@@ -10,7 +10,7 @@ int op_add(int a, int b)
 }
 
 /**
- * op_add - Subtracts two integers
+ * op_sub - Compute difference of two integers
  * @a: First integer
  * @b: Second integer
  * Return: Difference a and b
@@ -43,10 +43,10 @@ int op_div(int a, int b)
 }
 
 /**
- * op_add - Computes the remainder
- * @a: Divider
- * @b: Diviser
- * Return: The remainder of the division of a by b
+ * op_mod - Computes the remainder
+ * @a: Numerator
+ * @b: Denominator
+ * Return: Remainder of the division of a by b
  */
 int op_mod(int a, int b)
 {
