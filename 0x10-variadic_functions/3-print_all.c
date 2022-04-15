@@ -1,4 +1,6 @@
 #include <stdarg.h>
+#include <stddef.h>
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -25,11 +27,12 @@ void print_all(const char * const format, ...)
 			string = va_arg(strings, char *);
 			if (string == NULL)
 				printf("(nil)");
-				break;
 			else
+			{
 				printf("%s", string);
-				free(string)
-				break;
+				free(string);
+			}
+			break;
 
 		case 'i':
 			printf("%d", va_arg(strings, int));
