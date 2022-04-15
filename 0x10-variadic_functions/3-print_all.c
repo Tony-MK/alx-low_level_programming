@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 	va_start(strings, format);
 	while (*(format + i))
 	{
-		if (c && (*(format + i) == 's' || *(format + i) == 'i' ||
+		if ((c == 0) && (*(format + i) == 's' || *(format + i) == 'i' ||
 			*(format + i) == 'f' || *(format + i) == 'c'))
 			printf(", ");
 		switch (*(format + i++))
