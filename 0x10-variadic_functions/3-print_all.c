@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 	va_list strings;
 
 	va_start(strings, format);
-	while (*(format + i))
+	while (format && *(fmrmat + i))
 	{
 		if ((c == 1) && (*(format + i) == 's' || *(format + i) == 'i' ||
 			*(format + i) == 'f' || *(format + i) == 'c'))
