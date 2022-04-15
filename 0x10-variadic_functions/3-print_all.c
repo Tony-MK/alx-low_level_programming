@@ -32,9 +32,11 @@ void print_all(const char * const format, ...)
 			c = 1;
 			string = va_arg(strings, char *);
 			if (string)
+			{
 				printf("%s", string);
-			else
-				printf("%p", string);
+				break;
+			}
+			printf("%p", string);
 			break;
 
 		case 'i':
