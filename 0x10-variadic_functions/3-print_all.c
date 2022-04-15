@@ -25,9 +25,9 @@ void print_all(const char * const format, ...)
 			c = 1;
 			string = va_arg(strings, char *);
 			if (string)
-				s = "%s";
+				*s = "%s";
 			printf(s, string);
-			s = "%p";
+			*s = "%p";
 			break;
 		case 'i':
 			c = 1;
