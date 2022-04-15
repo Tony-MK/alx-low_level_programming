@@ -10,39 +10,39 @@
 void print_all(const char * const format, ...)
 {
 	register unsigned long int i = 0;
+	register char c = 0;
 	va_list strings;
 	char *string;
 
 	va_start(strings, format);
 	while (*(format + i))
 	{
-		if (i && (*(format + i) == 's' || *(format + i) == 'i' ||
+		if (c && (*(format + i) == 's' || *(format + i) == 'i' ||
 			*(format + i) == 'f' || *(format + i) == 'c'))
-		{
 			printf(", ");
-		}
 		switch (*(format + i++))
 		{
 		case 's':
+			c = 1;
 			string = va_arg(strings, char *);
-			if (string == NULL)
-				printf("(nil)");
-			else
-			{
+			if (string)
 				printf("%s", string);
-				free(string);
-			}
+			else
+				printf("%p", string);
 			break;
 
 		case 'i':
+			c = 1;
 			printf("%d", va_arg(strings, int));
 			break;
 
 		case 'f':
+			c = 1;
 			printf("%f", va_arg(strings, double));
 			break;
 
 		case 'c':
+			c = 1;
 			printf("%c", va_arg(strings, int));
 			break;
 		}
