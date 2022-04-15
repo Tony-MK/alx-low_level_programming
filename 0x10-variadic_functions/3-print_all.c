@@ -9,8 +9,9 @@
  */
 void print_all(const char * const format, ...)
 {
-	register unsigned long int i = 0, c = 0;
-	char *string, *s = "%d";
+	register unsigned long int i = 0, c = 0, n = 0;
+	char *string;
+	char *s[] = {"%d", "%s"};
 	va_list strings;
 
 	va_start(strings, format);
@@ -22,12 +23,11 @@ void print_all(const char * const format, ...)
 		switch (*(format + i))
 		{
 		case 's':
-			c = 1;
+			c = 1, n = 0;
 			string = va_arg(strings, char *);
 			if (string)
-				*s = "%s";
-			printf(s, string);
-			*s = "%p";
+				n = 1;
+			printf(s[n], string);
 			break;
 		case 'i':
 			c = 1;
