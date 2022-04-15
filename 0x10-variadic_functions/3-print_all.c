@@ -13,6 +13,12 @@ void print_all(const char * const format, ...)
 	register char c = 0;
 	va_list strings;
 	char *string;
+	
+	if (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
 
 	va_start(strings, format);
 	while (*(format + i))
