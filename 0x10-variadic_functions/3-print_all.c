@@ -25,9 +25,11 @@ void print_all(const char * const format, ...)
 			string = va_arg(strings, char *);
 			if (string == NULL)
 				printf("(nil)");
+				break;
 			else
 				printf("%s", string);
-			break;
+				free(string)
+				break;
 
 		case 'i':
 			printf("%d", va_arg(strings, int));
