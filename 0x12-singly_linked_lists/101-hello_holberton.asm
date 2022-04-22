@@ -3,7 +3,7 @@
 
 section .data:
 
-string: db "Hello, Holberton", 0x0A, 0
+	string: db "Hello, Holberton", 0x0A, 0
 
 section .text:
 
