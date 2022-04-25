@@ -3,7 +3,8 @@
 #include "lists.h"
 /**
  * add_nodeint_end - Adds node to a singly linked list
- * @h: Head of the singly linked list
+ * @head: Head of the singly linked list
+ * @n: Value of node
  * Return: The number of nodes
  */
 listint_t *add_nodeint(listint_t **head, const int n)
