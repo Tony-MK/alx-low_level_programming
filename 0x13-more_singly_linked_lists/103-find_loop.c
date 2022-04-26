@@ -1,12 +1,11 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- * get_nodeint_at_index - Gets node by index in a singly linked list
+ * find_listint_loop - Finds the loop in a singly linked list
  * @head: Head of the singly linked list
- * @index: The postion of the node from the head
  * Return: A pointer to the node
  */
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+listint_t *find_listint_loop(listint_t *head)
 {
 	register unsigned int offset = 0x00;
 get_node:

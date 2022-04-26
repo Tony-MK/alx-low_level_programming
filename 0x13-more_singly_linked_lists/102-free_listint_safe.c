@@ -18,14 +18,15 @@ size_t free_listint_safe(listint_t **h)
 		if (*h - (*(*h)).next > 0)
 		{
 			tmp = (*(*h)).next;
+			free(*h);
 			*h = tmp;
 			size++;
 			continue;
 		}
+		free(*h);
 		*h = NULL;
 		size++;
 		break;
 	}
-	*h = NULL;
 	return (size);
 }
