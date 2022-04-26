@@ -9,14 +9,12 @@
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	register unsigned int offset = 0x00;
-	register listint_t *tmp = head;
-
 get_node:
 	if (offset == index)
-		return (tmp);
-	else if (tmp == NULL || offset > index)
+		return (head);
+	else if (head == NULL || offset > index)
 		return (NULL);
 	offset++;
-	tmp = head->next;
+	head = head->next;
 	goto get_node;
 }
