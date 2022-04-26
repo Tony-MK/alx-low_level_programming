@@ -1,5 +1,4 @@
 #include <stdlib.h>
-
 #include "lists.h"
 /**
  * delete_nodeint_at_index - Deletes node on index in a singly linked list
@@ -11,7 +10,16 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	register unsigned int offset = 0x00;
 	register listint_t *node, *tmp = *head;
-	
+
+	if (head == NULL || *head == NULL)
+		return (-1);
+	else if (index == 0x00)
+	{
+		node = (*head)->next;
+		free(*head);
+		*head = node;
+		return (1);
+	}
 	while ((tmp) && (offset++ <= index))
 	{
 		if (tmp->next && offset-- == index)
