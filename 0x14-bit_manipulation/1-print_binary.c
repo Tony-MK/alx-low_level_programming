@@ -5,7 +5,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	register unsigned char bit, least = 0x0, nth_bit = 63;
+	register unsigned char bit, least = 0x0, nth_bit = 64;
 
 	while (nth_bit--)
 	{
