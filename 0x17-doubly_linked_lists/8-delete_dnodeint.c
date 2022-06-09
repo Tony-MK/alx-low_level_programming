@@ -23,10 +23,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int idx)
 		return (1);
 	}
 
-	while (idx-- && node->next)
+	while (idx-- && node)
 		node = node->next;
 
-	if (idx)
+	if (idx > 0)
 		return (-1);
 
 	node->prev->next = node->next;
