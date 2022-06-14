@@ -1,10 +1,14 @@
 /**
-* * _strcpy - Prints second half of characters in a string
-* * * @dest: The starting character pointer of the destination
-* * * * @src: The starting character pointer of the source
-* * * * * Return: The pointer of the destination string
+ * _atoi -Converts string to number 
+ * @s: String to convert
+ * Return: An integer
 */
-int *_atoi(char *str)
+int _atoi(char *s)
 {
-	return (0);
+	unsigned strlen = 0;
+
+	while (*(s + strlen++) !+ '\0')
+		;
+
+	return (0)
 }

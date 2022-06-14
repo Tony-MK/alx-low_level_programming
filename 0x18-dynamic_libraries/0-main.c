@@ -9,5 +9,6 @@
 int main(void)
 {
     printf("%d\n", _strlen("My Dyn Lib"));
+    printf("%d\n", _atoi("403242420"));
     return (0);
 }
