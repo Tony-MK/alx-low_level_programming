@@ -1,20 +1,9 @@
-#include "strlen.c"
-/**
-* * _strcpy - Prints second half of characters in a string
-* * * @dest: The starting character pointer of the destination
-* * * * @src: The starting character pointer of the source
-* * * * * Return: The pointer of the destination string
-*/
-char *_strcpy(char *dest, char *src)
+/*
+ * _abs - Computes modulus of an integer
+ * @n: Integer to compute absolute value 
+ * Return: The modulus of n
+ */
+int _abs(int n)
 {
-	register int length = _strlen(src);
-	register int index = 0;
-
-	while (index < length)
-	{
-		*(dest + index) = *(src + index);
-		index++;
-	}
-	*(dest + length) = '\0';
-	return (dest);
+	return (n >=0 ? n : -n);
 }
